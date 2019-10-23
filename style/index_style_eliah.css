@@ -1,0 +1,36 @@
+body
+{
+background-color: rgb(75, 69, 69);
+opacity: 0.5;
+}
+
+.button {
+    width: 70px;
+    height: 50px;
+    margin: 3px;
+    border-radius: 12px;
+    border-color: rgb(75, 69, 69);
+    font-size: 180%;
+    font-family: "Calibri", sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: gray;
+}
+
+#output {
+      background-color: white;
+      margin: 5px;
+      font-size: 25px;
+      min-height: 30px;
+}
+
+#textbox {
+    width: 300px;
+
+}
