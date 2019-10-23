@@ -10,10 +10,12 @@
 
         <link rel="stylesheet" type="text/css" href="style/index_style_luca.css">        
         <link rel="stylesheet" type="text/css" href="style/index_style_eliah.css">
-        <script src="script/index_script.js"></script>
+        <script src="script/calculation_script.js"></script>
+        <script src="script/theme_script.js"></script>
     </head>
     <body>
         <h1>Taschenrechner</h1>
+        <button id="changeTheme" class="button buttonLeft" onclick="buttonTheme()">Theme</button>
         <div id="textbox">
                 <p id="output"></p>
         </div>
@@ -28,8 +30,8 @@
                 <td>
                     <button class="button" onclick="buttonCloseBracket()">)</button>
                 </td>
-                <td>
-                    <button class="button" onclick="buttonBack()">&larr;</button>
+                <td colspan="2">
+                    <button id="back" class="button" onclick="buttonBack()">&larr;</button>
                 </td>
             </tr>
             <tr>
