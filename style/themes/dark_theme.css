@@ -1,4 +1,56 @@
-#themeTest {
+body
+{
+background-color:#292929;
+color: white;
+}
+
+
+
+#calculator {
+    border-color: #a0a0a0;
+}
+
+
+
+.operation {
+    background-color: #7d7c7a;
+    color: #292929;
+}
+
+.operation:hover {
+    background-color: #636360;
+}
+
+
+.number {
+    background-color: #adaca8;
+    color: #292929;
+}
+
+.number:hover {
+    background-color: #9c9b97;
+}
+
+
+.colored {
+    background-color: #f4b142;
     color: white;
-    background-color: black;
+}
+
+.colored:hover {
+    background-color: #fcbc53;
+}
+
+
+
+#textbox {
+    border-color: #a0a0a0;
+}
+
+#textbox:hover {
+    border-color: white;
+}
+
+#output {
+    color: white;
 }

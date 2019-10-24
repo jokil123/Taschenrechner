@@ -7,9 +7,8 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         -->
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
-
-        <link rel="stylesheet" type="text/css" href="style/index_style_luca.css">        
-        <link rel="stylesheet" type="text/css" href="style/index_style_eliah.css">
+    
+        <link rel="stylesheet" type="text/css" href="style/index_style.css">
         <link rel="stylesheet" type="text/css" href="style/themes/light_theme.css" id="themeSheet">
 
         <script src="script/calculation_script.js"></script>
@@ -17,103 +16,108 @@
     </head>
     <body>
         <h1>Taschenrechner</h1>
-        <p id="themeTest">theme test</p>
-        <button id="changeTheme" class="button buttonLeft" onclick="changeTheme()">Theme</button>
-        <div id="textbox">
-                <p id="output"></p>
+        <button id="changeTheme" class="button buttonLeft colspan2 colored" onclick="changeTheme()">Theme</button>
+            <div id="calculator">            
+            <table>
+                <tr>
+                    <td colspan="5">
+                        <div id="textbox" class="colspan5">
+                            <p id="output"></p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="button operation" onclick="buttonClear()">Clear</button>
+                    </td>
+                    <td>
+                        <button class="button operation" onclick="input('(')">(</button>
+                    </td>
+                    <td>
+                        <button class="button operation" onclick="input(')')">)</button>
+                    </td>
+                    <td colspan="2">
+                        <button class="button operation colspan2" onclick="buttonBack()">&larr;</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="button number" onclick="input('1')">1</button>
+                    </td>
+                    <td>
+                        <button class="button number" onclick="input('2')">2</button>
+                    </td>
+                    <td>
+                        <button class="button number" onclick="input('3')">3</button>
+                    </td>
+                    <td>
+                        <button class="button operation" onclick="input('+')">+</button>
+                    </td>
+                    <td>
+                        <button class="button colored" onclick="buttonPi()">&pi;</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="button number" onclick="input('4')">4</button>
+                    </td>
+                    <td>
+                        <button class="button number" onclick="input('5')">5</button>
+                    </td>
+                    <td>
+                        <button class="button number" onclick="input('6')">6</button>
+                    </td>
+                    <td>
+                        <button class="button operation" onclick="input('-')">-</button>
+                    </td>
+                    <td>
+                        <button class="button colored" onclick="input('e')">e</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="button number" onclick="input('7')">7</button>
+                    </td>
+                    <td>
+                        <button class="button number" onclick="input('8')">8</button>
+                    </td>
+                    <td>
+                        <button class="button number" onclick="input('9')">9</button>
+                    </td>
+                    <td>
+                        <button class="button operation" onclick="input('*')">*</button>
+                    </td>
+                    <td>
+                        <button class="button operation" onclick="input('²')">x²</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="button operation" onclick="input('.')">.</button>
+                    </td>
+                    <td>
+                        <button class="button number" onclick="input('0')">0</button>
+                    </td>
+                    <td>
+                        <button class="button  colored" onclick="buttonEqual()">=</button>
+                    </td>
+                    <td>
+                        <button class="button operation" onclick="input('/')">/</button>
+                    </td>
+                    <td>
+                        <button class="button operation" onclick="input('³')">x³</button>
+                    </td>
+                    <!---
+                    <td>
+                        <button class="button" onclick="buttonLeft()">&larr;</button>
+                    </td>
+                    <td>
+                        <button class="button" onclick="buttonRight()">&rarr;</button>
+                    </td>
+                    -->
+                </tr>
+            </table>
         </div>
-        <table>
-            <tr>
-                <td>
-                    <button class="button" onclick="buttonClear()">Clear</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonOpenBracket()">(</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonCloseBracket()">)</button>
-                </td>
-                <td colspan="2">
-                    <button id="back" class="button" onclick="buttonBack()">&larr;</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button class="button" onclick="buttonOne()">1</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonTwo()">2</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonThree()">3</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonPlus()">+</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonPi()">&pi;</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button class="button" onclick="buttonFour()">4</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonFive()">5</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonSix()">6</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonMinus()">-</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonEuler()">e</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button class="button" onclick="buttonSeven()">7</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonEight()">8</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonNine()">9</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonMultiply()">*</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonSquare()">x²</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button class="button" onclick="buttonComma()">.</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonZero()">0</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonEqual()">=</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonDivide()">/</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonCube()">x³</button>
-                </td>
-                <!---
-                <td>
-                    <button class="button" onclick="buttonLeft()">&larr;</button>
-                </td>
-                <td>
-                    <button class="button" onclick="buttonRight()">&rarr;</button>
-                </td>
-                -->
-            </tr>
-        </table>
         <footer>Copyright &copy; Joshua Lung, Eliah Valentak, Luca Maier 2019/20</footer>
     </body>
 </html>
