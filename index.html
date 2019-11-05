@@ -3,10 +3,10 @@
     <head>
         <title>Taschenrechner</title>
         <meta charset="UTF-8">
-        <!--<meta name="theme-color" content="#ffffff">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        -->
-        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+        <meta name="description" content="HTML, JavaScript und Css Web-Taschenrechner">
+        <meta name="author" content="Joshua Lung, Eliah Valentak, Luca Maier">
+
+        <link rel="shortcut icon" type="image" href="img/favicon/favicon1.png"/>
     
         <link rel="stylesheet" type="text/css" href="style/index_style.css">
         <link rel="stylesheet" type="text/css" href="style/themes/light_theme.css" id="themeSheet">
@@ -16,16 +16,13 @@
     </head>
     <body>
         <h1>Taschenrechner</h1>
-        <button id="changeTheme" class="button buttonLeft colspan2 colored" onclick="changeTheme()">Theme</button>
-            <div id="calculator">            
+
+        <div id="calculator" class="container">            
+            <div id="textbox" class="colspan5">
+                <p id="output"></p>
+            </div>
+
             <table>
-                <tr>
-                    <td colspan="5">
-                        <div id="textbox" class="colspan5">
-                            <p id="output"></p>
-                        </div>
-                    </td>
-                </tr>
                 <tr>
                     <td>
                         <button class="button operation" onclick="buttonClear()">Clear</button>
@@ -107,14 +104,24 @@
                     <td>
                         <button class="button operation" onclick="input('³')">x³</button>
                     </td>
-                    <!---
+                </tr>
+            </table>
+        </div>
+        <div id="theme" class="container">
+            <table>
+                <tr>
                     <td>
-                        <button class="button" onclick="buttonLeft()">&larr;</button>
+                        <button id="darkButton" class="button colored themeWidth" onclick="changeTheme('style/themes/dark_theme.css')">Dark Mode</button>
                     </td>
                     <td>
-                        <button class="button" onclick="buttonRight()">&rarr;</button>
+                        <button id="lightButton" class="button colored themeWidth" onclick="changeTheme('style/themes/light_theme.css')">Light Mode</button>
                     </td>
-                    -->
+                    <td>
+                        <button id="orangeButton" class="button colored themeWidth" onclick="changeTheme('style/themes/orange_theme.css')">Orange Mode</button>
+                    </td>
+                    <td>
+                        <button id="glowButton" class="button colored themeWidth" onclick="changeTheme('style/themes/glow_theme.css')">Glow Mode</button>
+                    </td>
                 </tr>
             </table>
         </div>

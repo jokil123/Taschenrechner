@@ -1,11 +1,11 @@
 body {
 background-color: white;
-color: #292929;
+color: #ff4301;
 }
 
 
 
-#lightButton {
+#orangeButton {
     width: 0px;
     font-size: 0px;
     margin: 0px;
@@ -14,9 +14,8 @@ color: #292929;
 
 
 
-
 .container {
-    border-color: #a6a6a6;
+    border-color: #ff4301;
 }
 
 
@@ -40,18 +39,18 @@ color: #292929;
 
 
 .colored {
-    background-color: #4285f4;
+    background-color: #ff4301;
     color: white;
 }
 
 .colored:hover {
-    background-color: #5393fc;
+    background-color: #ba3b0f;
 }
 
 
 
 #textbox {
-    border-color: #a6a6a6;
+    border-color: #ff4301;
 }
 
 #textbox:hover {

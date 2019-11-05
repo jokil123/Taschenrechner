@@ -61,6 +61,8 @@ function buttonEqual() {
 	calcInputParsed = parseInput()
 	calcOutput = String(eval(calcInputParsed));
 
+	catchError()	
+
 	document.getElementById("output").innerHTML = calcOutput;
 	calcInput = calcOutput
 }
@@ -88,6 +90,20 @@ function updateCursor() {
 	document.getElementById("output").innerHTML = calcInput;
 }
 */
+
+function catchError() {
+	switch (calcOutput) {
+		case "Infinity":
+			calcOutput = "Division by zero Error"
+			break;
+		case "NaN":
+			calcOutput = "Syntax Error"
+			break;
+		default:
+			break;
+	}
+
+}
 
 
 function parseInput() {

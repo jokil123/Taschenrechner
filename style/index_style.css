@@ -3,25 +3,30 @@ body {
     transition: 0.5s;
 }
 
-#calculator {
-    width: 447px;
-
+.container {
+    width: 442px;
     border-width: 1px;
     border-radius: 5px;
     border-style: solid;
 
     padding-left: 5px;
     padding-top: 7px;
-    padding-bottom: 6px;;
+    padding-bottom: 7px;;
 
     margin: 10px;
 }
+
+
+table {
+    margin-left: 3px;
+}
+
 
 .button {
     height: 40px;   
     width: 80px;
     font-size: 15px;
-    margin: 2px;
+    margin: 1px;
     cursor: pointer;
     transition: 0.3s;
     border: none;
@@ -29,8 +34,13 @@ body {
 }
 
 
+.themeWidth {
+    width: 101px;
+}
+
+
 .colspan2 {
-    width: 168px;
+    width: 166px;
 }
 
 
