@@ -1,4 +1,4 @@
-var fx = "5 * x - 28"
+var fx = "5 * -(x**3) + 12 * x + 3"
 var x = 0
 var y = 0
 
